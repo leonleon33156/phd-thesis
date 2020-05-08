@@ -17,7 +17,7 @@ BIBS = ../bib/papers.bib ../bib/r.smith.bib ../bib/weblinks.bib
 doc:	$(DOC).tex $(SUBDOCS) $(BIBS) images graphs
 	$(LATEX) $(DOC)
 	$(BIBTEX) $(DOC)
-	$(MAKEINDEX) $(DOC).glo -s nomencl.ist -o $(DOC).gls
+	$(MAKEINDEX) $(DOC).nlo -s nomencl.ist -o $(DOC).gls
 	$(LATEX) $(DOC)
 	$(LATEX) $(DOC)
 
@@ -58,7 +58,7 @@ clean:
 	rm -f *.loa
 	rm -f *.out
 	rm -f *.gls
-	rm -f *.glo
+	rm -f *.nlo
 	rm -f *.ilg
 
 distclean: clean
